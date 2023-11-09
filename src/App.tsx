@@ -1,18 +1,16 @@
-import React, {useEffect} from 'react';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import './App.scss';
+import BoardComponent from "./Components/Board/BoardComponent";
+import {Board} from "./Models/Board";
 
 function App() {
-  useEffect(()=>{
-    let f = function(x:number) {alert(x)};
-    (function(){f(1)}())
-  },[])
+    const [board, setBoard] = useState(Board.getInstance);
+    board.initCells();
 
 
   return (
     <div className="App">
-      <div>
-        something
-      </div>
+        <BoardComponent board={board} setBoard={setBoard}/>
     </div>
   );
 }

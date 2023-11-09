@@ -1,0 +1,8 @@
+$width: 64px;
+
+.board {
+  width: 8*$width;
+  height: 8*$width;
+  display: flex;
+  flex-wrap: wrap;
+}

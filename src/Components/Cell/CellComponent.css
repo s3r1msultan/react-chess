@@ -1,0 +1,17 @@
+.cell {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white {
+  background-color: rgba(255, 165, 0, 0.65);
+}
+
+.black {
+  background-color: deepskyblue;
+}
+
+/*# sourceMappingURL=CellComponent.css.map */
