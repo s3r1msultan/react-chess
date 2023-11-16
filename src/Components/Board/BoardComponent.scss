@@ -1,8 +1,10 @@
 $width: 64px;
 
 .board {
-  width: 8*$width;
-  height: 8*$width;
+  width: 8 * $width + 4;
+  height: 8 * $width + 4;
   display: flex;
   flex-wrap: wrap;
+  border: solid 2px black;
+  border-radius: 5px;
 }

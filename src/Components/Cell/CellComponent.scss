@@ -1,11 +1,18 @@
 $cell_width: 64px;
 
-.cell{
+.cell {
   width: $cell_width;
   height: $cell_width;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  & img {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    cursor: pointer;
+  }
 }
 
 .white {
@@ -14,4 +21,15 @@ $cell_width: 64px;
 
 .black {
   background-color: deepskyblue;
+}
+
+.selected {
+  background-color: brown;
+}
+
+.available {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #22c022;
 }
