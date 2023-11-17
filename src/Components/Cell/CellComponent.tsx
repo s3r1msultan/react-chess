@@ -18,7 +18,7 @@ const CellComponent = ({ cell, select, isSelected }: CellComponentProps) => {
       }}
       style={styleAttack}
     >
-      {cell.available && cell.isEmpty() && <div className="available"></div>}
+      {cell.available && !cell.piece && <div className="available"></div>}
       {cell.piece?.logo && (
         <img
           src={cell.piece.logo}

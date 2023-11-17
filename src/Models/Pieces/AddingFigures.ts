@@ -3,7 +3,6 @@ import { ClassicalChessFactory } from "../PieceFactory/ClassicalChessFactory";
 import { PieceFactory } from "../PieceFactory/PieceFactory";
 import { ChessPiecesNames } from "./ChessPiecesNames";
 import { Colors } from "./Colors";
-import { Queen } from "./Queen";
 
 export class AddingPieces {
   private readonly cells: Cell[][];

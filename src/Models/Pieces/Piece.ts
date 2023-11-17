@@ -22,6 +22,7 @@ export abstract class Piece {
       this.name + this.color + this.cell.y.toString() + this.cell.x.toString();
     this.moveStrategy = null;
   }
+
   setMoveStrategy(moveStrategy: MoveStrategy) {
     this.moveStrategy = moveStrategy;
   }

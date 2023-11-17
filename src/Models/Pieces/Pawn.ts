@@ -4,7 +4,6 @@ import { Piece } from "./Piece";
 import blackLogo from "../../assets/black-pawn.png";
 import whiteLogo from "../../assets/white-pawn.png";
 import { ChessPiecesNames } from "./ChessPiecesNames";
-import { MoveStrategy } from "../MoveStrategy/MoveStrategy";
 import { PawnMove } from "../MoveStrategy/PawnMove";
 
 export class Pawn extends Piece {

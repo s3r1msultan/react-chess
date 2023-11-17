@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./BoardComponent.scss";
 import CellComponent from "../Cell/CellComponent";
@@ -12,14 +12,25 @@ interface BoardComponent {
 function BoardComponent({ board, setBoard }: BoardComponent) {
   const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 
+  useEffect(() => {
+    highLightCells();
+  }, [selectedCell]);
+
   function select(cell: Cell) {
-    if (!cell.isEmpty()) {
+    if (
+      selectedCell &&
+      selectedCell !== cell &&
+      selectedCell.piece?.moveStrategy?.canMove(cell)
+    ) {
+      selectedCell.piece.moveStrategy.move(cell);
+      setSelectedCell(null);
+    } else if (cell.piece) {
       setSelectedCell(cell);
     }
   }
 
-  function highLightCells() {
-    board.highlightCells();
+  function highLightCells(): void {
+    board.highlightCells(selectedCell);
     updateBoard();
   }
 
@@ -40,7 +51,7 @@ function BoardComponent({ board, setBoard }: BoardComponent) {
                   key={cell.id}
                   select={select}
                   isSelected={
-                    cell.x === selectedCell?.x && cell.y === selectedCell.y
+                    cell.x === selectedCell?.x && cell.y === selectedCell?.y
                   }
                 />
               );

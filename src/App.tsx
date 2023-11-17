@@ -22,6 +22,7 @@ function App() {
         board={board}
         setBoard={setBoard}
       />
+      <button onClick={() => restart()}>Restart</button>
     </div>
   );
 }

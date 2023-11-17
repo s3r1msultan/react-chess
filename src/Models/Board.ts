@@ -5,6 +5,7 @@ import { Colors } from "./Pieces/Colors";
 export class Board {
   cells: Cell[][] = [];
   private addingPieces: AddingPieces = new AddingPieces(this.cells);
+
   public initCells() {
     for (let i = 0; i < 8; ++i) {
       let row: Cell[] = [];
@@ -18,7 +19,25 @@ export class Board {
       this.cells.push(row);
     }
   }
+
   public addPieces() {
     this.addingPieces.addPieces();
+  }
+
+  getCopyBoard(): Board {
+    const new_board = new Board();
+    new_board.cells = this.cells;
+    return new_board;
+  }
+
+  highlightCells(selectedCell: Cell | null): void {
+    for (let i = 0; i < this.cells.length; ++i) {
+      const row = this.cells[i];
+      for (let j = 0; j < row.length; ++j) {
+        const possibleCell = row[j];
+        possibleCell.available =
+          !!selectedCell?.piece?.moveStrategy?.canMove(possibleCell);
+      }
+    }
   }
 }
