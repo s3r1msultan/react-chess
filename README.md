@@ -1,50 +1,57 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Шахматная Игра
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание проекта
 
-## Available Scripts
+Проект представляет собой интерактивную шахматную игру, разработанную на языке TypeScript с использованием фреймворка React. В проекте используются различные паттерны проектирования, такие как Strategy, Singleton, Factory, Observer, Adapter и Decorator, для обеспечения гибкости, расширяемости и повторного использования кода.
 
-In the project directory, you can run:
+## Язык программирования
 
-### `npm start`
+- Язык программирования: TypeScript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Фреймворк
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Фреймворк: React с использованием TypeScript
 
-### `npm test`
+## Паттерны проектирования
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Strategy Pattern
 
-### `npm run build`
+`Strategy` паттерн используется для определения различных стратегий движения фигур в шахматной игре. Каждая фигура может иметь свою собственную стратегию движения, что обеспечивает гибкость в изменении поведения фигур.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Singleton Pattern
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`Singleton` паттерн применяется для реализации таймера в игре. Это обеспечивает единственный экземпляр таймера, который может быть доступен из любой части приложения.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Factory Pattern
 
-### `npm run eject`
+`Factory` паттерн используется для создания фигур в шахматной игре. Фабрика отвечает за создание конкретных экземпляров фигур на основе запросов от игроков.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Observer Pattern
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`Observer` паттерн применяется для реализации механизма наблюдения за ходами игроков. Каждый игрок может быть подписан на события и получать уведомления об изменениях в игре.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Adapter Pattern
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`Adapter` паттерн используется для конвертации времени из секунд в минуты. Это обеспечивает удобный интерфейс для работы с временем в различных форматах.
 
-## Learn More
+### Decorator Pattern
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`Decorator` паттерн используется для добавления стилей текста игроков в шахматной игре. Например, игрок, который ходит, может быть выделен зеленым цветом, а игрок, который ждет, - желтым цветом.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-=======
-# react-chess
->>>>>>> origin/main
+## Структура проекта
+
+- **/src**: Содержит исходный код приложения.
+  - **/Сomponents**: React-компоненты, отвечающие за различные аспекты игры.
+  - **/Models**: Хранит реализации моделей и паттернов проектирования, используемых в проекте.
+  - **App.tsx**: Основной файл приложения.
+  - **index.tsx**: Точка входа в приложение
+
+- **/public**: Содержит статические файлы и основной HTML-файл.
+  - **index.html**: Основной HTML-файл, служащий точкой входа в приложение.
+
+- **/node_modules**: Содержит зависимости, установленные с помощью npm.
+
+- **package.json**: Конфигурационный файл, включающий метаданные проекта и зависимости
+
+- **README.md**: Файл с документацией по проекту.
+
