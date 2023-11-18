@@ -1,4 +1,4 @@
-import { Cell } from "../Cell";
+import { Cell } from "../Board/Cell";
 import { Colors } from "./Colors";
 import { Piece } from "./Piece";
 import blackLogo from "../../assets/black-bishop.png";

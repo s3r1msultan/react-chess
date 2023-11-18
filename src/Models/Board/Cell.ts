@@ -1,5 +1,5 @@
-import { Colors } from "./Pieces/Colors";
-import { Piece } from "./Pieces/Piece";
+import { Colors } from "../Pieces/Colors";
+import { Piece } from "../Pieces/Piece";
 import { Board } from "./Board";
 
 export class Cell {

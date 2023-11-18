@@ -29,4 +29,6 @@ export class System implements ISystem {
       player.update(this);
     }
   }
+
+  giveUp(): void {}
 }

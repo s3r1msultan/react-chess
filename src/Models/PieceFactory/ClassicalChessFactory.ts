@@ -1,4 +1,4 @@
-import { Cell } from "../Cell";
+import { Cell } from "../Board/Cell";
 import { Bishop } from "../Pieces/Bishop";
 import { ChessPiecesNames } from "../Pieces/ChessPiecesNames";
 import { Colors } from "../Pieces/Colors";

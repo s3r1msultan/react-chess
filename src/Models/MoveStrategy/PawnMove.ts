@@ -1,4 +1,4 @@
-import { Cell } from "../Cell";
+import { Cell } from "../Board/Cell";
 import { Colors } from "../Pieces/Colors";
 import { MoveStrategy } from "./MoveStrategy";
 

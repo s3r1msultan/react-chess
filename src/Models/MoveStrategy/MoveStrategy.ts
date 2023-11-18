@@ -1,4 +1,4 @@
-import { Cell } from "../Cell";
+import { Cell } from "../Board/Cell";
 import { ChessPiecesNames } from "../Pieces/ChessPiecesNames";
 
 export abstract class MoveStrategy {
@@ -23,7 +23,6 @@ export abstract class MoveStrategy {
 
     const min = Math.min(this.currentCell.y, target.y);
     const max = Math.max(this.currentCell.y, target.y);
-    console.log(min, max);
     for (let y = min + 1; y < max; ++y) {
       if (!this.currentCell.board.cells[y][this.currentCell.x].isEmpty()) {
         return false;

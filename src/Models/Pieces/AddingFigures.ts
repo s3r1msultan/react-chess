@@ -1,4 +1,4 @@
-import { Cell } from "../Cell";
+import { Cell } from "../Board/Cell";
 import { ClassicalChessFactory } from "../PieceFactory/ClassicalChessFactory";
 import { PieceFactory } from "../PieceFactory/PieceFactory";
 import { ChessPiecesNames } from "./ChessPiecesNames";

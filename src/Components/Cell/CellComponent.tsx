@@ -1,5 +1,5 @@
 import "./CellComponent.scss";
-import { Cell } from "../../Models/Cell";
+import { Cell } from "../../Models/Board/Cell";
 
 interface CellComponentProps {
   cell: Cell;

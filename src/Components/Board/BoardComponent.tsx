@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import "./BoardComponent.scss";
 import CellComponent from "../Cell/CellComponent";
-import { Board } from "../../Models/Board";
-import { Cell } from "../../Models/Cell";
+import { Board } from "../../Models/Board/Board";
+import { Cell } from "../../Models/Board/Cell";
 import { System } from "../../Models/Players/System/System";
-import { Colors } from "../../Models/Pieces/Colors";
 
-interface BoardComponent {
+interface BoardComponentProps {
   board: Board;
   setBoard: (board: Board) => void;
   swapPlayer: () => void;
@@ -18,7 +17,7 @@ function BoardComponent({
   setBoard,
   swapPlayer,
   system,
-}: BoardComponent) {
+}: BoardComponentProps) {
   const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 
   useEffect(() => {

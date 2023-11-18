@@ -1,6 +1,6 @@
 import { Cell } from "./Cell";
-import { AddingPieces } from "./Pieces/AddingFigures";
-import { Colors } from "./Pieces/Colors";
+import { AddingPieces } from "../Pieces/AddingFigures";
+import { Colors } from "../Pieces/Colors";
 
 export class Board {
   cells: Cell[][] = [];
