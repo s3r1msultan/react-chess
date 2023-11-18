@@ -55,3 +55,4 @@
 
 - **README.md**: Файл с документацией по проекту.
 
+![src_diagram](https://github.com/s3r1msultan/react-chess/assets/63633675/99b06ec7-347c-42d9-8869-62c5a9f15c2c)
