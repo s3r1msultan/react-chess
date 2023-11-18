@@ -1,5 +1,5 @@
-import { Colors } from "../Pieces/Colors";
-import { IPlayer } from "./IPlayer";
+import { Colors } from "../../Pieces/Colors";
+import { IPlayer } from "../Player/IPlayer";
 import { ISystem } from "./ISystem";
 
 export class System implements ISystem {
@@ -12,8 +12,6 @@ export class System implements ISystem {
     if (isExist) {
       return console.log("System: Player has been attached already.");
     }
-
-    console.log("System: Attached a player.");
     this.players.push(player);
   }
 
@@ -24,7 +22,6 @@ export class System implements ISystem {
     }
 
     this.players.splice(playerIndex, 1);
-    console.log("System: Detached a player");
   }
 
   notify(): void {

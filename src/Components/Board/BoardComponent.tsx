@@ -4,12 +4,21 @@ import "./BoardComponent.scss";
 import CellComponent from "../Cell/CellComponent";
 import { Board } from "../../Models/Board";
 import { Cell } from "../../Models/Cell";
+import { System } from "../../Models/Players/System/System";
+import { Colors } from "../../Models/Pieces/Colors";
 
 interface BoardComponent {
   board: Board;
   setBoard: (board: Board) => void;
+  swapPlayer: () => void;
+  system: System;
 }
-function BoardComponent({ board, setBoard }: BoardComponent) {
+function BoardComponent({
+  board,
+  setBoard,
+  swapPlayer,
+  system,
+}: BoardComponent) {
   const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 
   useEffect(() => {
@@ -23,8 +32,9 @@ function BoardComponent({ board, setBoard }: BoardComponent) {
       selectedCell.piece?.moveStrategy?.canMove(cell)
     ) {
       selectedCell.piece.moveStrategy.move(cell);
+      swapPlayer();
       setSelectedCell(null);
-    } else if (cell.piece) {
+    } else if (cell.piece && cell.piece.color === system.turn) {
       setSelectedCell(cell);
     }
   }
